@@ -1,4 +1,4 @@
-name: CI Docker Build Check
+name: CI Docker Case Sensitivity Check
 
 on:
   push:
@@ -13,8 +13,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Simuler l'absence du service Docker
-        run: sudo systemctl stop docker
-
-      - name: Tenter de fabriquer l'image Docker
-        run: docker build -t pm-agent-image:latest .
+      - name: Build Docker image
+        run: docker build -t pm-agent-app:latest .
