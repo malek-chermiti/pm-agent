@@ -1,5 +1,5 @@
 FROM alpine:latest
-WOKDIR /app
+WORKDIR /app
 
 # On tente de copier App.py avec une minuscule 'app.py'
 COPY app.py .
