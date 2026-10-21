@@ -1,7 +1,7 @@
 FROM alpine:latest
-WORKDIR /app
+WORKDIR /App
 
 # On tente de copier App.py avec une minuscule 'app.py'
-COPY app.py .
+COPY App.py .
 
-CMD ["cat", "app.py"]
+CMD ["cat", "App.py"]
