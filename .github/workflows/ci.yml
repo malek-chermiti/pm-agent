@@ -1,4 +1,4 @@
-name: CI Docker Case Sensitivity Check
+name: CI Docker 
 
 on:
   push:
@@ -7,11 +7,11 @@ on:
 
 jobs:
   docker-build:
-    runs-on: windows
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checut repository
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t pm-agent-app:latest .
+        run: docker build -v pm-agent-app:latest .
